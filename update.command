@@ -17,9 +17,6 @@ cd "${BUILD_DIR}"
 # Download latest BuildTools.jar, but exit if it fails
 curl -o BuildTools.jar https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar || exit 1
 
-# https://www.spigotmc.org/wiki/buildtools/#running-buildtools
-# asks us to set this
-export MAVEN_OPTS="-Xmx2G"
 # Run the BuildTools jar, but exit if it fails (e.g. if user has no Java)
 java -Xmx2G -jar BuildTools.jar || exit 1
 
