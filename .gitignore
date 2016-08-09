@@ -1,0 +1,9 @@
+# Because the repository directory will also be used as the Minecraft server
+# directory, Git should ignore everything apart from the repository contents
+
+*
+
+!.gitignore
+!README.md
+!start.command
+!update.command
