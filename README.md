@@ -9,7 +9,7 @@
 
 * You must have Java installed ([Java 8](https://java.com/download/) is recommended)
 
-## Usage
+## Setup
 
 1. Make a folder for your server
 
@@ -30,3 +30,8 @@
 4. Run `start.command`
 
    This starts the server
+
+## Usage
+
+- `update.command`: Downloads the latest BuildTools.jar, then builds it, and copies the resulting `spigot-X.X.X.jar` file into your server folder
+- `start.command`: Starts running the Spigot Minecraft server
