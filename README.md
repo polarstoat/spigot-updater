@@ -11,23 +11,17 @@
 
 ## Setup
 
-1. Make a folder for your server
+1. Clone this repository into a new folder for your server, `Minecraft server/`
 
    ```sh
-   mkdir minecraft_server
+   git clone https://github.com/polarstoat/spigot-updater.git 'Minecraft server'
    ```
 
-2. Clone this repository into it
-
-   ```sh
-   git clone https://github.com/polarstoat/spigot-updater.git minecraft_server
-   ```
-
-3. Run `update.command`
+2. Run `update.command`
 
    It will take some time. When finished, there will be a `spigot-X.X.X.jar` file in the server folder.
 
-4. Run `start.command`
+3. Run `start.command`
 
    This starts the server
 
