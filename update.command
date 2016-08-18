@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 #
 # Downloads and builds a Spigot Minecraft server, overwriting any
 # existing Spigot Minecraft server
