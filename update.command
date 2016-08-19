@@ -3,6 +3,12 @@
 # Downloads and builds a Spigot Minecraft server, overwriting any
 # existing Spigot Minecraft server
 
+# Handle unrecoverable (fatal) errors
+function fatal_error {
+  echo "$1" >&2
+  exit 1
+}
+
 # Path to the server
 SERVER_DIR="$(dirname "$0")"
 # Path to a temporary directory to build inside of
@@ -14,11 +20,16 @@ trap "rm -rf "${BUILD_DIR}"" EXIT
 # Change into temporary directory
 cd "${BUILD_DIR}"
 
-# Download latest BuildTools.jar, but exit if it fails
-curl -o BuildTools.jar https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar || exit 1
+# Download latest BuildTools
+echo 'Downloading BuildTools'
+curl -#O https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar || fatal_error 'Download failed'
+echo 'Download complete'
 
-# Run the BuildTools jar, but exit if it fails (e.g. if user has no Java)
-java -Xmx2G -jar BuildTools.jar || exit 1
+# Run BuildTools
+echo 'Building Spigot (this will take a while)'
+java -Xmx2G -jar BuildTools.jar > /dev/null 2>&1 || fatal_error 'Build failed'
+echo 'Build complete'
 
 # Copy built Spigot jar into server directory
 cp -f spigot-*.jar "${SERVER_DIR}"
+echo 'Spigot updated!'
