@@ -30,6 +30,10 @@ echo 'Building Spigot (this will take a while)'
 java -Xmx2G -jar BuildTools.jar > /dev/null 2>&1 || fatal_error 'Build failed'
 echo 'Build complete'
 
+# Delete old Spigot jar
+rm -f "${SERVER_DIR}"/spigot-*.jar
+
 # Copy built Spigot jar into server directory
 cp -f spigot-*.jar "${SERVER_DIR}"
+
 echo 'Spigot updated!'
