@@ -2,8 +2,8 @@
 
 > Automatically create/update a Spigot Minecraft server on macOS
 
-![macOS](https://img.shields.io/badge/macOS-10.11.6-brightgreen.svg)
-![Minecraft](https://img.shields.io/badge/Minecraft-1.10.2-brightgreen.svg)
+![macOS](https://img.shields.io/badge/macOS-10.12.2-brightgreen.svg)
+![Minecraft](https://img.shields.io/badge/Minecraft-1.11-brightgreen.svg)
 
 ## Requirements
 
