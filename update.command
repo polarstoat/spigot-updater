@@ -9,8 +9,8 @@ function fatal_error {
   exit 1
 }
 
-# Path to the server
-SERVER_DIR="$(dirname "$0")"
+# Path to the server, see http://stackoverflow.com/a/246128
+SERVER_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 # Path to a temporary directory to build inside of
 BUILD_DIR="$(mktemp -dt spigot-updater)"
 
