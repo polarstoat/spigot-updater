@@ -19,7 +19,7 @@
 
 2. Run `update.command`
 
-   It will take some time. When finished, there will be a `spigot-X.X.X.jar` file in the server folder.
+   It will take some time. When finished, there will be a `spigot-X.jar` file in the server folder.
 
 3. Run `start.command`
 
@@ -27,5 +27,5 @@
 
 ## Usage
 
-- `update.command`: Downloads the latest BuildTools.jar, then builds it, and copies the resulting `spigot-X.X.X.jar` file into your server folder
+- `update.command`: Downloads the latest BuildTools.jar, then builds it, and copies the resulting `spigot-X.jar` file into your server folder
 - `start.command`: Starts running the Spigot Minecraft server
